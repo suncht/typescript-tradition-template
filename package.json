@@ -1,0 +1,71 @@
+{
+  "name": "typescript-tradition-template",
+  "description": "基于typescript的多页面工程模板（传统开发模式，不基于vue）",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "sunchangtan",
+    "email": "sct1302120@163.com",
+    "url": "https://github.com/suncht"
+  },
+  "scripts": {
+    "clear": "rimraf -rf dist/",
+    "clear:all": "rimraf -rf node_modules/ && npm run clear",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server --mode=development --open",
+    "dev": "npm run webpack-dev-server",
+    "start": "npm run dev",
+    "build:dev": "npm run clear && npm run webpack --mode=development",
+    "build:prod": "npm run clear && npm run webpack --mode=production",
+    "style:prettier": "prettier --write \"src/**/*.ts\"",
+    "style:lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "dependencies": {},
+  "maintainers": [
+    "sunchangtan <sct1302120@163.com> https://github.com/suncht"
+  ],
+  "devDependencies": {
+    "@types/node": "^12.11.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^4.3.0",
+    "html-webpack-plugin": "^3.2.0",
+    "ora": "^4.0.2",
+    "replace-in-files": "^2.0.3",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:suncht/typescript-tradition-template.git"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "tsconfig.json",
+    "webpack.config.js",
+    "tslint.json"
+  ],
+  "keywords": [
+    "typescript",
+    "playground",
+    "create",
+    "simple",
+    "project",
+    "seed"
+  ]
+}
